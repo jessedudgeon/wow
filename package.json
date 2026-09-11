@@ -1,0 +1,13 @@
+{
+  "name": "wow-dudgeon",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Public website and realm status endpoint for Dudgeon WoW.",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

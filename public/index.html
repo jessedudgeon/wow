@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#07101a" />
+  <meta name="description" content="Dudgeon WoW — a private Wrath of the Lich King 3.3.5a realm." />
+  <meta property="og:title" content="Dudgeon WoW" />
+  <meta property="og:description" content="Realm information, live status, setup instructions, and client configuration for Dudgeon WoW." />
+  <meta property="og:type" content="website" />
+  <title>Dudgeon WoW — Wrath 3.3.5a</title>
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+  <div class="aurora aurora-a" aria-hidden="true"></div>
+  <div class="aurora aurora-b" aria-hidden="true"></div>
+  <div class="stars" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Dudgeon WoW home">
+      <span class="brand-rune">D</span>
+      <span class="brand-text">
+        <strong>DUDGEON</strong>
+        <small>WRATH REALM</small>
+      </span>
+    </a>
+
+    <nav aria-label="Main navigation">
+      <a href="#status">Status</a>
+      <a href="#servers">Server</a>
+      <a href="#play">Play</a>
+      <a href="#downloads">Downloads</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="kicker">PRIVATE WORLD OF WARCRAFT REALM · 3.3.5a</p>
+        <h1>Adventure waits<br><span>beyond the gate.</span></h1>
+        <p class="hero-body">
+          Dudgeon WoW is a private Wrath of the Lich King realm built for a smaller,
+          persistent community. Find the current realm status, connection details,
+          server information, and the files you need to get connected.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="#play">How to Play</a>
+          <button class="btn secondary" type="button" data-copy="set realmlist wowclient.dudgeon.io">
+            Copy Realmlist
+          </button>
+        </div>
+
+        <div class="realm-command">
+          <span>REALMLIST</span>
+          <code>set realmlist wowclient.dudgeon.io</code>
+        </div>
+      </div>
+
+      <aside class="hero-panel">
+        <div class="crest">
+          <div class="crest-inner">D</div>
+        </div>
+        <p class="panel-kicker">THE DUDGEON REALM</p>
+        <h2>Wrath, rebuilt for our own world.</h2>
+        <div class="quick-facts">
+          <div><span>Expansion</span><strong>Wrath of the Lich King</strong></div>
+          <div><span>Client</span><strong>3.3.5a · Build 12340</strong></div>
+          <div><span>Core</span><strong>AzerothCore</strong></div>
+          <div><span>Realm Host</span><strong>wowclient.dudgeon.io</strong></div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section status-section" id="status">
+      <div class="section-heading compact">
+        <div>
+          <p class="kicker">LIVE REALM HEALTH</p>
+          <h2>Server Status</h2>
+        </div>
+        <button class="refresh-button" id="refresh-status" type="button" aria-label="Refresh server status">
+          <span>↻</span> Refresh
+        </button>
+      </div>
+
+      <div class="status-shell" aria-live="polite">
+        <div class="status-summary">
+          <span class="status-orb checking" id="overall-orb"></span>
+          <div>
+            <span class="status-caption">DUDGEON WRATH</span>
+            <strong id="overall-status">Checking realm…</strong>
+            <small id="status-detail">Testing the public realm endpoints.</small>
+          </div>
+        </div>
+
+        <div class="status-services">
+          <article class="service-card">
+            <div class="service-heading">
+              <span class="service-icon">A</span>
+              <div>
+                <span>Authentication</span>
+                <small>TCP 3724</small>
+              </div>
+            </div>
+            <div class="service-result">
+              <strong id="auth-status">Checking</strong>
+              <small id="auth-latency">—</small>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-heading">
+              <span class="service-icon">W</span>
+              <div>
+                <span>World Server</span>
+                <small>TCP 8085</small>
+              </div>
+            </div>
+            <div class="service-result">
+              <strong id="world-status">Checking</strong>
+              <small id="world-latency">—</small>
+            </div>
+          </article>
+        </div>
+
+        <div class="status-footer">
+          <span id="checked-at">Waiting for first check…</span>
+          <span>Auto-refreshes every 30 seconds</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="servers">
+      <div class="section-heading">
+        <p class="kicker">THE REALM</p>
+        <h2>One world. Room to grow.</h2>
+        <p>
+          The site is structured so additional realms or services can be added later without
+          changing how players find the main Wrath server.
+        </p>
+      </div>
+
+      <article class="realm-card">
+        <div class="realm-title">
+          <span class="realm-badge">LIVE</span>
+          <div>
+            <h3>Dudgeon Wrath</h3>
+            <p>Wrath of the Lich King · 3.3.5a</p>
+          </div>
+        </div>
+
+        <div class="realm-details">
+          <div>
+            <span>Connection</span>
+            <code>wowclient.dudgeon.io</code>
+          </div>
+          <div>
+            <span>Core</span>
+            <strong>AzerothCore</strong>
+          </div>
+          <div>
+            <span>Realm Type</span>
+            <strong>Private Community</strong>
+          </div>
+          <div>
+            <span>Rules / Rates</span>
+            <strong>Published here as configured</strong>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section play-section" id="play">
+      <div class="section-heading">
+        <p class="kicker">GET CONNECTED</p>
+        <h2>Enter the world.</h2>
+        <p>
+          Dudgeon WoW uses the Wrath of the Lich King 3.3.5a client. Once you have a compatible
+          client, connecting only requires the realm configuration below.
+        </p>
+      </div>
+
+      <div class="steps">
+        <article class="step">
+          <span class="step-no">01</span>
+          <div>
+            <h3>Prepare the client</h3>
+            <p>Use a compatible World of Warcraft 3.3.5a client (build 12340).</p>
+          </div>
+        </article>
+
+        <article class="step featured-step">
+          <span class="step-no">02</span>
+          <div>
+            <h3>Set the realmlist</h3>
+            <p>Place the realm hostname in your client configuration:</p>
+            <div class="code-box">
+              <code>set realmlist wowclient.dudgeon.io</code>
+              <button type="button" data-copy="set realmlist wowclient.dudgeon.io">Copy</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="step">
+          <span class="step-no">03</span>
+          <div>
+            <h3>Launch & log in</h3>
+            <p>Start the client with <code>Wow.exe</code> and sign in with your realm account.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="account-note">
+        <span class="note-icon">i</span>
+        <div>
+          <strong>Account creation</strong>
+          <p>
+            Public self-service registration is not enabled on this site yet. When account tools
+            are added, they can live here without exposing the AzerothCore database directly.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="downloads">
+      <div class="section-heading">
+        <p class="kicker">CLIENT FILES</p>
+        <h2>Downloads & configuration</h2>
+        <p>
+          This area is ready for Dudgeon-owned configuration, patches, launcher files, and
+          permitted addon packages. The base realmlist file is available now.
+        </p>
+      </div>
+
+      <div class="downloads-grid">
+        <a class="download-card available" href="/downloads/config/realmlist.wtf" download>
+          <span class="file-icon">WTF</span>
+          <div>
+            <span class="download-type">CONFIGURATION</span>
+            <h3>realmlist.wtf</h3>
+            <p>Preconfigured for <code>wowclient.dudgeon.io</code>.</p>
+          </div>
+          <span class="download-action">Download ↓</span>
+        </a>
+
+        <a class="download-card available" href="/downloads/config/README.txt" download>
+          <span class="file-icon">TXT</span>
+          <div>
+            <span class="download-type">SETUP GUIDE</span>
+            <h3>Client Setup Readme</h3>
+            <p>Quick instructions for installing the realm configuration.</p>
+          </div>
+          <span class="download-action">Download ↓</span>
+        </a>
+
+        <div class="download-card disabled">
+          <span class="file-icon">CFG</span>
+          <div>
+            <span class="download-type">FUTURE</span>
+            <h3>Dudgeon Client Pack</h3>
+            <p>Server configuration and approved client-side files.</p>
+          </div>
+          <span class="coming-soon">Coming soon</span>
+        </div>
+
+        <div class="download-card disabled">
+          <span class="file-icon">ADD</span>
+          <div>
+            <span class="download-type">FUTURE</span>
+            <h3>Recommended Addons</h3>
+            <p>A curated 3.3.5a-compatible addon list or package.</p>
+          </div>
+          <span class="coming-soon">Coming soon</span>
+        </div>
+      </div>
+
+      <p class="legal-downloads">
+        Only files you have the right to redistribute should be hosted here. The site is designed
+        for realm-owned configuration and authorized supporting files rather than distributing the
+        commercial game client itself.
+      </p>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div>
+        <p class="kicker">ABOUT</p>
+        <h2>A home for the realm.</h2>
+      </div>
+      <div class="about-copy">
+        <p>
+          This site is the public front door for Dudgeon WoW: status, server information,
+          connection instructions, configuration downloads, and eventually news, changelogs,
+          account tools, and additional realm services.
+        </p>
+        <p>
+          The game service itself remains separate at <code>wowclient.dudgeon.io</code>, keeping
+          the public website independent from the AzerothCore host.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand">
+      <span class="brand-rune small">D</span>
+      <div>
+        <strong>DUDGEON WOW</strong>
+        <small>wow.dudgeon.io</small>
+      </div>
+    </div>
+    <p>
+      Independent private community project. Not affiliated with or endorsed by Blizzard Entertainment.
+      World of Warcraft and related trademarks are property of their respective owners.
+    </p>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">Copied</div>
+
+  <script src="/assets/app.js" defer></script>
+</body>
+</html>
